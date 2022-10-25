@@ -23,7 +23,7 @@ function saveData(e) {
 form.addEventListener('submit', onFormSubmit);
 
 function onFormSubmit(e) {
-  e.preventDefault;
+  e.preventDefault();
   e.currentTarget.reset();
   console.log(result());
   localStorage.removeItem(Storage);
