@@ -24,7 +24,18 @@ form.addEventListener('submit', onFormSubmit);
 
 function onFormSubmit(e) {
   e.preventDefault();
+
+  const {
+    elements: { email, message },
+  } = e.currentTarget;
+
+  const result = {
+    email: email.value,
+    message: message.value,
+  };
+  console.log(result);
+
   e.currentTarget.reset();
-  console.log(result());
+
   localStorage.removeItem(STORAGE);
 }
