@@ -21,15 +21,6 @@ const gallery = galleryItems
 
 galleryContainer.insertAdjacentHTML('afterbegin', gallery);
 
-galleryContainer.addEventListener('click', bigPicture);
-
-function bigPicture(evt) {
-  evt.preventDefault();
-  if (evt.target.nodeName !== 'IMG') {
-    return;
-  }
-}
-
 new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionsDelay: 250,

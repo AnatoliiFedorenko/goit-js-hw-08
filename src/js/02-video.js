@@ -13,13 +13,7 @@ player.on(
 );
 player
   .setCurrentTime(localStorage.getItem('playerTime'))
-  .then(function (seconds) {})
   .catch(function (error) {
-    switch (error.name) {
-      case 'RangeError':
-        break;
-
-      default:
-        break;
-    }
+    console.log(error.name);
+    console.log(error.message);
   });
